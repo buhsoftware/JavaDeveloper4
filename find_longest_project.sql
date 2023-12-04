@@ -1,0 +1,2 @@
+SELECT id, MAX(DATEDIFF('MONTH', start_date, finish_date)) AS month_count FROM project GROUP BY id
+HAVING MAX(DATEDIFF('MONTH', start_date, finish_date)) = SELECT MAX(DATEDIFF('MONTH', start_date, finish_date))  GROUP BY id;
